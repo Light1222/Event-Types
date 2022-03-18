@@ -16,7 +16,7 @@
     const buttonElement = document.getElementById('button1');
 
     inputElement.addEventListener('change', function(e) {
-        // console.log(`the value you entered is ${e.target.value}`);
+        console.log(`the value you entered is ${e.target.value}`);
     });
     inputElement.addEventListener('input', function(e){
         // console.log(`the value you typed is ${e.target.value}`);
@@ -34,11 +34,23 @@
     buttonElement.addEventListener('mouseout', function(e) {
         // console.log(`your mouse is no longer on the button`)
     });
+    buttonElement.addEventListener('click', function(e) {
+        console.log(`you clicked off of the input`)
+    });
     inputElement.addEventListener('focus', function(e) {
         // console.log(`you focused on the input!`)
     });
     inputElement.addEventListener('blur', function(e) {
         // console.log(`you stopped focusing on the input!`)
+    });
+    inputElement.addEventListener('click', function(e) {
+        console.log(`you just clicked on the box`)
+    });
+    inputElement.addEventListener('click', function(e) {
+        console.log(`you just clicked on the box`)
+    });
+    buttonElement.addEventListener('click', function(e) {
+        console.log(`you just clicked out of the box`)
     });
     document.addEventListener('keydown', function(e) {
         console.log(`you just hit the ${e.key} key`)
