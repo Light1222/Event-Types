@@ -13,7 +13,7 @@
 <body>
 <div class="container">
     <div  class="content">
-        <h3> Is it a rectangle?</h3>
+        <h3>Area of a rectangle</h3>
         <div class="row">
             <div>
                 <label for="l">L</label>
@@ -30,47 +30,27 @@
     </div>
 </div>
 <script>
-    const l = document.getElementById('a');
-    const h = document.getElementById('b');
+    const a = document.getElementById('l');
+    const b = document.getElementById('h');
     const ans = document.querySelector('p');
     const calculateButton = document.getElementById('calc');
     const clearButton = document.getElementById('clear');
 
     calculateButton.addEventListener('click', function(e){
-        let sideA = +a.value;
-        let sideB = +b.value;
-        let sideC = +c.value;
+        let numA = +a.value;
+        let numB = +b.value;
         ans.classList.remove("hidden")
 
-        if(!checkIsValid(sideA) || !checkIsValid(sideB) || !checkIsValid(sideC)){
-            ans.textContent = 'Invalid Inputs';
-            return;
-        }
-        if (checkIsTri(sideA, sideB, sideC)){
-            ans.textContent = 'Yes, this makes a valid triangle'
-            return;
-        }
-        ans.textContent = 'Inputs do NOT create a valid triangle'
+        let fans = (numA * numB)
+        ans.textContent = `${fans}`
     })
 
     clearButton.addEventListener('click', function(e){
         a.value = " "
         b.value = " "
-        c.value = " "
         ans.textContent = "";
         ans.classList.add("hidden");
     })
-
-    function checkIsTri(num1, num2, num3) {
-        let sideAB = (num1 + num2) > num3;
-        let sideAC = (num1 + num3) > num2;
-        let sideBC = (num2 + num3) > num1;
-
-        if (sideAB && sideAC && sideBC) {
-            return true;
-        }
-        return false;
-    }
 
     function checkIsValid(num){
         if (isNaN(num)){
@@ -82,4 +62,4 @@
     }
 </script>
 </body>
-</html
+</html>
