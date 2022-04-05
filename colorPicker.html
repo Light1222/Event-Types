@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        <div class="row">
+            <h3>Background</h3>
+            <button id="1">Red</button>
+            <button id="2">Green</button>
+            <button id="3">Blue</button>
+            <button id="10">pacificCoast</button>
+            <button id="11">ultraViolet</button>
+            <button id="12">turquoise</button>
+        </div>
+        <div class="row">
+            <h3>text</h3>
+            <button id="4">Pink</button>
+            <button id="5">Teal</button>
+            <button id="6">Purple</button>
+            <button id="7">livingCoast</button>
+            <button id="8">bloomingDahlia</button>
+            <button id="9">warmSand</button>
+        </div>
+        <button id="clear">Clear</button>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content')
+    const red = document.getElementById('1');
+    const green = document.getElementById('2');
+    const blue = document.getElementById('3');
+    const pacificCoast = document.getElementById('10');
+    const ultraViolet = document.getElementById('11');
+    const turquoise = document.getElementById('12');
+
+    const pink = document.getElementById('4');
+    const teal = document.getElementById('5');
+    const purple = document.getElementById('6');
+    const livingCoast = document.getElementById('7');
+    const bloomingDahlia = document.getElementById('8');
+    const warmSand = document.getElementById('9');
+
+    const clearButton = document.getElementById('clear');
+
+    red.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('red');
+    })
+    blue.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('blue');
+    })
+    green.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('green');
+    })
+    pacificCoast.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('pacificCoast');
+    })
+    ultraViolet.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('ultraViolet');
+    })
+    turquoise.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('turquoise');
+    })
+    pink.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('pink');
+    })
+    teal.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('teal');
+    })
+   purple.addEventListener('click', function(e){
+       removeTextColor();
+        content.classList.add('purple');
+    })
+    livingCoast.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('livingCoast');
+    })
+    bloomingDahlia.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('bloomingDahlia');
+    })
+    warmSand.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('warmSand');
+    })
+    clearButton.addEventListener('click', function(e){
+        removeTextColor();
+        removeBGColor();
+    })
+
+    function removeBGColor(){
+        content.classList.remove('red')
+        content.classList.remove('blue')
+        content.classList.remove('green')
+        content.classList.remove('pacificCoast')
+        content.classList.remove('ultraViolet')
+        content.classList.remove('turquoise')
+    }
+
+    function removeTextColor(){
+        content.classList.remove('pink')
+        content.classList.remove('teal')
+        content.classList.remove('purple')
+        content.classList.remove('livingCoast')
+        content.classList.remove('bloomingDahlia')
+        content.classList.remove('warmSand')
+    }
+</script>
+<style>
+    .red{
+        background-color:red;
+    }
+    .green{
+        background-color:green;
+    }
+    .blue{
+        background-color:blue;
+    }
+    .pacificCoast{
+        background-color:#5B84B1FF;
+    }
+    .ultraViolet{
+        background-color:#5F4B8BFF;
+    }
+    .turquoise{
+        background-color:#42EADDFF;
+    }
+    .pink{
+        color:pink;
+    }
+    .teal{
+        color:teal;
+    }
+    .purple{
+       color:purple;
+    }
+    .livingCoast{
+        color:#FC766AFF;
+    }
+    .bloomingDahlia{
+        color:#E69A8DFF;
+    }
+    .warmSand{
+        color:#CDB599FF;
+    }
+    .content{
+        width: 700px;
+    }
+</style>
+
+</body>
+</html>
