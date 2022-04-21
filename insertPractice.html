@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+     <div class="content">
+         <h3>What is this?</h3>
+         <h4>I don't want this</h4>
+     </div>
+</div>
+</body>
+<script>
+    const content = document.querySelector('.content')
+    content.innnerHTML = '<h1 id="loss">I Love Zelda</h1><h4>Some other messages</h4>';
+    const zelda=document.createElement('h1');
+    zelda.innerHTML = 'I Love Zelda';
+    content.appendChild(zelda);
+
+    const food = document.createElement('h2')
+    food.innerHTML = 'I love Pizza'
+    content.insertAdjacentElement('afterbegin', food)
+
+    const mario = document.createElement('h2')
+    mario.innerHTML = 'I love mario'
+    content.insertAdjacentElement('afterbegin', mario)
+
+    const splatoon = document.createElement('h2')
+    splatoon.innerHTML = 'I love splatoon'
+    content.insertAdjacentElement('afterbegin', splatoon)
+
+    const kirby = document.createElement('h2')
+    kirby.innerHTML = 'I love kirby'
+    content.insertAdjacentElement('afterbegin', kirby)
+
+    const unwantedElement = document.querySelector('h4');
+    unwantedElement.remove();
+
+     const unwantedElement2 = docu
+     unwantedElement2.remove()
+
+</script>
+</html>
