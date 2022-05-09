@@ -1,6 +1,7 @@
 const cardList = document.querySelector('.cardList');
 
 buildBoard();
+let score = 0;
 
 let interval = setInterval(function(){
     addCard(cardList.children.length + 1)
@@ -8,6 +9,7 @@ let interval = setInterval(function(){
 
 cardList.addEventListener( 'click' , function(e){
          console.log(e.target);
+         score++
          if (e.target.matches('.cardList')) {
              return
          }
@@ -22,7 +24,7 @@ cardList.addEventListener( 'click' , function(e){
              clearInterval(interval);
          }
      });
-
+console.log(score)
 function addCard(value){
     let card = document.createElement('div');
     card.classList.add('card');
