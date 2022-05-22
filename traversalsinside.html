@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <ul id="first">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <ul id="second">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+    const firstList = document.getElementById('first');
+    const secondList = document.getElementById('second');
+
+    console.log(firstList.children);
+
+    for (let i=0; i<firstList.children.length; i++){
+        console.log(firstList.children[i].textContent);
+    }
+
+    for (let i=0; i<secondList.children.length; i++){
+        console.log(secondList.children[i].textContent);
+    }
+
+    console.log(firstList.parentElement);
+
+    console.log(firstList.nextElementSibling)
+
+    for (let i=0; i<firstList.nextElementSibling.children.length; i++){
+        console.log(firstList.nextElementSibling.children[i].textContent);
+    }
+
+    console.log(secondList.previousElementSibling);
+
+    for (let i=0; i<secondList.previousElementSibling.children.length; i++){
+        console.log(secondList.previousElementSibling.children[i].textContent);
+    }
+
+</script>
+</html>
