@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <button id="trigger">Delete Me!</button>
+        <div>
+            <button id="colorRepeat">Repeat</button>
+        </div>
+    </div>
+</div>
+<script>
+    const myButton = document.getElementById("trigger");
+    const colorRepeatButton = document.getElementById("colorRepeat")
+    const cancelButton = document.getElementById("cancel")
+    let interval;
+
+    myButton.addEventListener('click', function(){
+        setTimeout(function(){
+            console.log("I was removed")
+        }, 1000);
+    })
+
+    colorRepeatButton.addEventListener('click', function() {
+        if (!interval){
+            interval = setInterval(function(){
+                document.body.style.backgroundColor = 'red';
+            }, 5000);
+        }
+    })
+
+    cancelButton.addEventListener('click', function(){
+        if(interval){
+            clearInterval(interval);
+            interval = null;
+        }
+    })
+</script>
+</body>
+</html>
