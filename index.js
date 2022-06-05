@@ -1,30 +1,43 @@
 const cardList = document.querySelector('.cardList');
-
+const score = document.querySelector('.score');
+let points = 0
+const btn = document.getElementById('btn');
 buildBoard();
-let score = 0;
 
 let interval = setInterval(function(){
     addCard(cardList.children.length + 1)
 }, 2000);
 
+btn.addEventListener('click', function onClick(event) {
+    document.body.style.backgroundColor = 'salmon';
+});
+
+
+
 cardList.addEventListener( 'click' , function(e){
          console.log(e.target);
-         score++
          if (e.target.matches('.cardList')) {
              return
          }
          if (e.target.classList.contains('active')) {
              e.target.classList.remove('active');
              e.target.classList.add('inactive');
+             points = points + 1;
+             score.innerHTML = `${points} points`
              return
+         }
+         if (e.target.classList.contains('inactive')){
+                points = points + 2
+             score.innerHTML = `${points} points`
          }
          e.target.remove();
          let children = cardList.children;
          if (children.length < 1){
              clearInterval(interval);
+             console.log('Game completed')
          }
      });
-console.log(score)
+
 function addCard(value){
     let card = document.createElement('div');
     card.classList.add('card');
