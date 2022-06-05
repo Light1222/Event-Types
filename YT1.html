@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Insert Practice YT1</title>
+    <title>YT1</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,18 +15,33 @@
                 <label for="last">Last Name</label>
                 <input type="text" id="last" name="last_name" placeholder="Doe">
             </div>
-            <button class="button1" id="a"> Say Hello</button>
+        </div>
+            <button id="h"> Say Hello</button>
+        <div class="input">
+
         </div>
     </div>
 </div>
 <script>
+    const input = document.querySelector('.input')
     const firstName = document.getElementById('first')
     const lastName = document.getElementById('last')
-    const btn = document.getElementById('a')
+    const hi = document.getElementById('h')
 
-    btn.addEventListener('click', function(){
-        console.log()
-    })
+    function hello() {
+        const names = document.createElement('p')
+        let nameF = firstName.value;
+        let nameL = lastName.value;
+        let name = `${nameF}  ${nameL}`
+
+        names.innerHTML = `Hello ${name}`
+        input.insertAdjacentElement('afterbegin', names)
+        nameF.value = ""
+        nameL.value = ""
+    }
+
+    hi.addEventListener('click', hello)
+
 </script>
 </body>
 
