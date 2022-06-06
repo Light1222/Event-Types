@@ -6,7 +6,7 @@ buildBoard();
 
 let interval = setInterval(function(){
     addCard(cardList.children.length + 1)
-}, 3000);
+}, 1000);
 
 
 
