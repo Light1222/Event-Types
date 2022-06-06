@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <title>Timers</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .red{
+            background-color: lightcoral;
+        }
+        .blue{
+            background-color: lightblue;
+        }
+        .green{
+            background-color: lightgreen;
+        }
+        .grey{
+            background-color: grey;
+        }
+        .steel{
+            background-color: lightsteelblue;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -11,6 +28,7 @@
         <button id="trigger">Delete Me!</button>
         <div>
             <button id="colorRepeat">Repeat</button>
+            <button id="cancel">STOP</button>
         </div>
     </div>
 </div>
@@ -18,18 +36,22 @@
     const myButton = document.getElementById("trigger");
     const colorRepeatButton = document.getElementById("colorRepeat")
     const cancelButton = document.getElementById("cancel")
+    const colors = ['red','blue','green','black','white']
     let interval;
 
     myButton.addEventListener('click', function(){
         setTimeout(function(){
-            console.log("I was removed")
-        }, 1000);
+            myButton.remove()
+        }, 3000);
     })
 
     colorRepeatButton.addEventListener('click', function() {
         if (!interval){
             interval = setInterval(function(){
-                content.style.backgroundColor = 'red';
+                let randomNum = Math.floor(Math.random()* colors.length);
+                let newColor = colors[randomNum];
+                removeBGColor();
+                colorRepeatButton.classList.add(newColor);
             }, 5000);
         }
     })
@@ -40,6 +62,14 @@
             interval = null;
         }
     })
+
+    function removeBGColor() {
+        colorRepeatButton.classList.remove('red')
+        colorRepeatButton.classList.remove('blue')
+        colorRepeatButton.classList.remove('green')
+        colorRepeatButton.classList.remove('grey')
+        colorRepeatButton.classList.remove('steel')
+    }
 </script>
 </body>
 </html>
