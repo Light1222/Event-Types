@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #f3f4f6;
+}
+
+label {
+    display: block;
+    line-height: 1.25rem;
+    font-weight: 500;
+    font-size: 14px;
+    color: #374151;
+}
+
+input[type="text"], textarea, select{
+    font-size: .875rem;
+    line-height: 1.25rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    color: #374151;
+}
+fieldset{
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    width: fit-content;
+    margin-bottom: 16px;
+    padding: 12px;
+}
+
+
+fieldset legend{
+    font-size: 14px;
+    color: #374151;
+}
+
+input[type="checkbox"]{
+    display: inline-block;
+}
+
+input[type="checkbox"] ~ label, input[type="radio"] ~ label {
+    display: inline;
+}
+
+section{
+    margin-bottom: 16px;
+}
+
+section header{
+    margin-bottom: 8px;
+}
+
+.row {
+    display: flex;
+    gap: 16px;
+}
+
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.content{
+    box-shadow: 0 1px 3px 0 rgba(0 0 0  0.1), 0 1px 2px -1px rgba(0 0 0  0.1);
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 500px;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: #5B84B1FF; color: black;
+    font-size: 25px;
+}
+.button2:hover {
+    background-color: steelblue;
+    font-size: 25px;
+    color: white;
+}
+.button1 {
+    background-color: #FC766AFF; color: black;
+    font-size: 25px;
+}
+.button1:hover {
+    background-color: coral;
+    font-size: 25px;
+    color: white;
+}
+.button3 {
+    background-color: darkorange; color: black;
+    font-size: 25px;
+}
+.button3:hover {
+    background-color: black;
+    font-size: 25px;
+    color: white;
+}
+.button4 {
+    background-color:  #E6E6DC; color: black;
+    font-size: 25px;
+}
+.button4:hover {
+    background:#c54245;
+    color: white;
+    font-size: 25px;
+}
+
+
+.container {
+    height: 200px;
+    position: relative;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

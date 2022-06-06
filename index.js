@@ -6,12 +6,7 @@ buildBoard();
 
 let interval = setInterval(function(){
     addCard(cardList.children.length + 1)
-}, 2000);
-
-btn.addEventListener('click', function onClick(event) {
-    document.body.style.backgroundColor = 'salmon';
-});
-
+}, 4000);
 
 
 cardList.addEventListener( 'click' , function(e){

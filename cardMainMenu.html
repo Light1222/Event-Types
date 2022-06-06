@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="card.css">
+    <title>Guess the Word</title>
+</head>
+<body>
+<h1>Difficulty</h1>
+<div class="container">
+    <div class="center">
+        <button class="button button1" id="easy">Easy</button>
+        <button class="button button2" id="medium">Medium</button>
+        <button class="button button3" id="hard">Hard</button>
+        <button class="button button4" id="impossible">Impossible</button>
+    </div>
+</div>
+<script>
+    const esy = document.getElementById('easy')
+    const med = document.getElementById('medium')
+    const hrd = document.getElementById('hard')
+    const imp = document.getElementById('impossible')
+
+    esy.addEventListener("click", function(){
+        document.location.href = 'cardClickerGame.html.html';
+    });
+
+    med.addEventListener("click", function(){
+        document.location.href = 'cardClickerGame.html2.html';
+    });
+
+    hrd.addEventListener("click", function(){
+        document.location.href = 'cardClickerGame.html3';
+    });
+
+    imp.addEventListener("click", function(){
+        document.location.href = 'cardClickerGame4.html';
+    });
+</script>
+</body>
+</html>
