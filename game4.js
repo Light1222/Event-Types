@@ -1,12 +1,18 @@
 const cardList = document.querySelector('.cardList');
 const score = document.querySelector('.score');
 let points = 0
-const btn = document.getElementById('btn');
+const back = document.getElementById('btn');
+const replay = document.createElement('button')
+const btnRow = document.querySelector('.btnrow')
 buildBoard();
 
 let interval = setInterval(function(){
     addCard(cardList.children.length + 1)
 }, 100);
+
+back.addEventListener('click', function(){
+    document.location.href = 'cardMainMenu.html';
+})
 
 cardList.addEventListener( 'click' , function(e){
     console.log(e.target);
@@ -29,6 +35,11 @@ cardList.addEventListener( 'click' , function(e){
     if (children.length < 1){
         clearInterval(interval);
         console.log('Game completed')
+        replay.innerHTML = "RESET"
+        btnRow.appendChild(replay);
+        replay.addEventListener('click', function(e) {
+            location.reload();
+        })
     }
 });
 
