@@ -34,7 +34,7 @@ cardList.addEventListener( 'click' , function(e){
          let children = cardList.children;
          if (children.length < 1){
              clearInterval(interval);
-             console.log('Game completed')
+            alert('Game completed')
              replay.innerHTML = "RESET"
              btnRow.appendChild(replay);
              replay.addEventListener('click', function(e) {
@@ -56,3 +56,4 @@ function buildBoard(){
         addCard('starter')
     }
 }
+
